@@ -1296,7 +1296,7 @@
                                       <?php if($settings['linkimage']==true){ ?>                                                                                                                                                                                                                                                                                     
                                         <a target="_blank" href="<?php if($row['custom_link']==""){echo '#';}else{echo $row['custom_link'];} ?>"><img src="<?php echo $outputimg; ?>" alt="<?php echo $row['title']; ?>" title="<?php echo $row['title']; ?>"   /></a>
                                       <?php }else{ ?>
-                                            <img src="<?php echo $url;?>imagestoscroll/<?php echo $row['image_name']; ?>" alt="<?php echo $row['title']; ?>" title="<?php echo $row['title']; ?>"   />
+                                            <img src="<?php echo $outputimg; ?>" alt="<?php echo $row['title']; ?>" title="<?php echo $row['title']; ?>"   />
                                       <?php } ?> 
                                      </div>
                                
@@ -1518,7 +1518,7 @@
                           <?php if($settings['linkimage']==true){ ?>                                                                                                                                                                                                                                                                                     
                             <a target="_blank" href="<?php if($row['custom_link']==""){echo '#';}else{echo $row['custom_link'];} ?>"><img src="<?php echo $outputimg; ?>" alt="<?php echo $row['title']; ?>" title="<?php echo $row['title']; ?>" /></a>
                           <?php }else{ ?>
-                                <img src="<?php echo $url;?>imagestoscroll/<?php echo $row['image_name']; ?>" alt="<?php echo $row['title']; ?>" title="<?php echo $row['title']; ?>"  />
+                                <img src="<?php echo $outputimg; ?>" alt="<?php echo $row['title']; ?>" title="<?php echo $row['title']; ?>"  />
                           <?php } ?> 
                          </div>
                        
