@@ -20,6 +20,8 @@ Admin can add,edit and delete slider images.Before add slider to wordPress blog 
 
 **Find WordPress Responsive Image Slider Pro Plugin(Unlimited Slider+Much more) at [Advanced PHP Scripts](http://www.my-php-scripts.net/index.php/Wordpress/wordpress-responsive-thumbnail-slider-pro.html)**
 
+**[Live Demo Pro Responsive Slider](http://my-php-scripts.net/wpdemo/wordpress-responsive-thumbnail-slider-demo/)**
+
 
 **Please rate this plugin if you find it useful**
 
