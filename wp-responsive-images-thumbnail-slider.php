@@ -416,7 +416,7 @@
                                       maxlength:15
                                     },
                                     visible:{
-                                         
+                                        required:true,  
                                         number:true,
                                         maxlength:15
                                         
