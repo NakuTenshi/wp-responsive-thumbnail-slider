@@ -51,21 +51,23 @@ to theme or pages/posts.
 
 1. Unlimited Slider(Multiple sliders).
 
-2. Add wordpress featured image in responsive slider directly from post/page add/edit.
+3. Upload image using media uploader(wp >3.5) Or simple uploader.
 
-3. Slider Easing Effects(select your desired slider easing effect from 16 easing effect).
+4. Add wordpress featured image in responsive slider directly from post/page add/edit.
 
-4. No advertisements.
+5. Slider Easing Effects(select your desired slider easing effect from 16 easing effect).
 
-5. New Field Added Image Description.If image description set it will added to image title tag for seo.
+6. No advertisements.
 
-6. New Field Added Image Order,Now admin can display slider according image order.
+7. New Field Added Image Description.If image description set it will added to image title tag for seo.
 
-7. New Field added open image link in new tab or same tab.
+8. New Field Added Image Order,Now admin can display slider according image order.
 
-8. Display slider with paging.
+9. New Field added open image link in new tab or same tab.
 
-9. Display slider image with caption.
+10. Display slider with paging.
+
+11. Display slider image with caption.
 
 
 [Get Support](http://www.my-php-scripts.net/index.php/Default-form.html)
@@ -103,9 +105,9 @@ OR you can add this to your theme by adding this code echo do_shortcode('[print_
 3. Preview Slider
 4. Front End slider
 5. Pro version manage sliders
-6. Pro version slider settings
-7. Pro version image add/edit
-8. Pro version slider settings
+6. Pro version add/edit image
+7. Pro version add/edit slider.
+8. Pro version admin slider preview
 9. Pro version featured image add/edit directly from post or page.
 
 == License ==
