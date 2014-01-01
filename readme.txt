@@ -3,7 +3,7 @@ Contributors:nik00726
 Donate link: http://my-php-scripts.net/donate-wordpress_image_thumbnail.php
 Tags:wordpress responsive slideshow,responsive thumbnail gallery,wordpress responsive slider with thumbnails,wordpress gallery responsive,wordpress fluid slider,wordpress fluid thumbnails slider,wordpress responsive image slider
 Requires at least:3.0
-Tested up to:3.7
+Tested up to:3.8
 Version:1.0
 Stable tag:trunk
 License: GPLv2 or later
@@ -47,6 +47,8 @@ to theme or pages/posts.
 
 9. Admin can set slider as circular slider.
 
+10. Responsive admin layout.
+
 **=Pro Version Features=**
 
 1. Unlimited Slider(Multiple sliders).
@@ -68,6 +70,8 @@ to theme or pages/posts.
 10. Display slider with paging.
 
 11. Display slider image with caption.
+
+12. Responsive admin layout.
 
 
 [Get Support](http://www.my-php-scripts.net/index.php/Default-form.html)

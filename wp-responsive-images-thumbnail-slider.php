@@ -147,350 +147,347 @@
       $settings=get_option('responsive_thumbnail_slider_settings');
       
 ?>      
-     <div style="width: 100%;">  
-        <div style="float:left;width:69%;">
-            <div class="wrap">
-               <table><tr><td><a href="https://twitter.com/FreeAdsPost" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @FreeAdsPost</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></td>
-                <td>
-                <a target="_blank" title="Donate" href="http://my-php-scripts.net/donate-wordpress_image_thumbnail.php">
-                <img id="help us for free plugin" height="30" width="90" src="http://www.postfreeadvertising.com/images/paypaldonate.jpg" border="0" alt="help us for free plugin" title="help us for free plugin">
-                </a>
-                </td>
-                </tr>
-                </table>
-                
+<div id="poststuff" > 
+   <div id="post-body" class="metabox-holder columns-2" >  
+      <div id="post-body-content">
+          <div class="wrap">
+              <table><tr><td><a href="https://twitter.com/FreeAdsPost" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @FreeAdsPost</a>
+                          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></td>
+                      <td>
+                          <a target="_blank" title="Donate" href="http://my-php-scripts.net/donate-wordpress_image_thumbnail.php">
+                              <img id="help us for free plugin" height="30" width="90" src="http://www.postfreeadvertising.com/images/paypaldonate.jpg" border="0" alt="help us for free plugin" title="help us for free plugin">
+                          </a>
+                      </td>
+                  </tr>
+              </table>
+
               <?php
-                    $messages=get_option('responsive_thumbnail_slider_messages'); 
-                    $type='';
-                    $message='';
-                    if(isset($messages['type']) and $messages['type']!=""){
+                  $messages=get_option('responsive_thumbnail_slider_messages'); 
+                  $type='';
+                  $message='';
+                  if(isset($messages['type']) and $messages['type']!=""){
 
-                    $type=$messages['type'];
-                    $message=$messages['message'];
+                      $type=$messages['type'];
+                      $message=$messages['message'];
 
-                    }  
-
-
-                    if($type=='err'){ echo "<div class='errMsg'>"; echo $message; echo "</div>";}
-                    else if($type=='succ'){ echo "<div class='succMsg'>"; echo $message; echo "</div>";}
+                  }  
 
 
-                    update_option('responsive_thumbnail_slider_messages', array());     
+                  if($type=='err'){ echo "<div class='errMsg'>"; echo $message; echo "</div>";}
+                  else if($type=='succ'){ echo "<div class='succMsg'>"; echo $message; echo "</div>";}
+
+
+                  update_option('responsive_thumbnail_slider_messages', array());     
               ?>      
-               <span><h3 style="color: blue;"><a target="_blank" href="http://www.my-php-scripts.net/index.php/Wordpress/wordpress-responsive-thumbnail-slider-pro.html">Update to Responsive Thumbnail Slider Pro Version</a></h3></span>
-               <br/>
-                    <h2>Slider Settings</h2>
-            <br>
-            <div id="poststuff">
-              <div id="post-body" class="metabox-holder columns-2">
-                <div id="post-body-content">
-                  <form method="post" action="" id="scrollersettiings" name="scrollersettiings" >
-                
-                    <div class="stuffbox" id="namediv" style="min-width:550px;">
-                         <h3><label>Link images with url ?</label></h3>
-                        <div class="inside">
-                             <table>
-                               <tr>
-                                 <td>
-                                   <input type="checkbox" id="linkimage" size="30" name="linkimage" value="" <?php if($settings['linkimage']==true){echo "checked='checked'";} ?> style="width:20px;">&nbsp;Add link to image ? 
-                                   <div style="clear:both"></div>
-                                   <div></div>
-                                 </td>
-                               </tr>
-                             </table>
-                             <div style="clear:both"></div>
-                         </div>
-                      </div>
-                      <div class="stuffbox" id="namediv" style="min-width:550px;">
-                         <h3><label>Auto Scroll ?</label></h3>
-                        <div class="inside">
-                             <table>
-                               <tr>
-                                 <td>
-                                   <input style="width:20px;" type='radio' <?php if($settings['auto']==true){echo "checked='checked'";}?>  name='isauto' value='auto' >Auto &nbsp;<input style="width:20px;" type='radio' name='isauto' <?php if($settings['auto']==false){echo "checked='checked'";} ?> value='manuall' >Scroll By Left & Right Arrow
-                                   <div style="clear:both"></div>
-                                   <div></div>
-                                 </td>
-                               </tr>
-                             </table>
-                             <div style="clear:both"></div>
-                         </div>
-                      </div>
-                      <div class="stuffbox" id="namediv" style="min-width:550px;">
-                         <h3><label >Speed</label></h3>
-                        <div class="inside">
-                             <table>
-                               <tr>
-                                 <td>
-                                   <input type="text" id="speed" size="30" name="speed" value="<?php echo $settings['speed']; ?>" style="width:100px;">
+              <span><h3 style="color: blue;"><a target="_blank" href="http://www.my-php-scripts.net/index.php/Wordpress/wordpress-responsive-thumbnail-slider-pro.html">UPGRADE TO PRO VERSION</a></h3></span>
+              <h2>Slider Settings</h2>
+              <div id="poststuff">
+                  <div id="post-body" class="metabox-holder columns-2">
+                      <div id="post-body-content">
+                          <form method="post" action="" id="scrollersettiings" name="scrollersettiings" >
+
+                              <div class="stuffbox" id="namediv" style="width:100%;">
+                                  <h3><label>Link images with url ?</label></h3>
+                                  <div class="inside">
+                                      <table>
+                                          <tr>
+                                              <td>
+                                                  <input type="checkbox" id="linkimage" size="30" name="linkimage" value="" <?php if($settings['linkimage']==true){echo "checked='checked'";} ?> style="width:20px;">&nbsp;Add link to image ? 
+                                                  <div style="clear:both"></div>
+                                                  <div></div>
+                                              </td>
+                                          </tr>
+                                      </table>
                                       <div style="clear:both"></div>
-                                      <div></div>
-                                 </td>
-                               </tr>
-                             </table>
-                             <div style="clear:both"></div>
-                           
-                         </div>
-                      </div>
-                      <div class="stuffbox" id="namediv" style="min-width:550px;">
-                         <h3><label >Pause</label></h3>
-                        <div class="inside">
-                             <table>
-                               <tr>
-                                 <td>
-                                   <input type="text" id="pause" size="30" name="pause" value="<?php echo $settings['pause']; ?>" style="width:100px;">
+                                  </div>
+                              </div>
+                              <div class="stuffbox" id="namediv" style="width:100%;">
+                                  <h3><label>Auto Scroll ?</label></h3>
+                                  <div class="inside">
+                                      <table>
+                                          <tr>
+                                              <td>
+                                                  <input style="width:20px;" type='radio' <?php if($settings['auto']==true){echo "checked='checked'";}?>  name='isauto' value='auto' >Auto &nbsp;<input style="width:20px;" type='radio' name='isauto' <?php if($settings['auto']==false){echo "checked='checked'";} ?> value='manuall' >Scroll By Left & Right Arrow
+                                                  <div style="clear:both"></div>
+                                                  <div></div>
+                                              </td>
+                                          </tr>
+                                      </table>
                                       <div style="clear:both"></div>
-                                      <div></div>
-                                 </td>
-                               </tr>
-                             </table>
-                             <div style="clear:both">The amount of time (in ms) between each auto transition</div>
-                           
-                         </div>
-                      </div>
-                      <div class="stuffbox" id="namediv" style="min-width:550px;">
-                         <h3><label >Circular Slider ?</label></h3>
-                        <div class="inside">
-                             <table>
-                               <tr>
-                                 <td>
-                                   <input type="checkbox" id="circular" size="30" name="circular" value="" <?php if($settings['circular']==true){echo "checked='checked'";} ?> style="width:20px;">&nbsp;Circular Slider ? 
-                                     <div style="clear:both"></div>
-                                     <div></div>
-                                 </td>
-                               </tr>
-                             </table>
-                             <div style="clear:both"></div>
-                           
-                         </div>
-                      </div>
-                      <div class="stuffbox" id="namediv" style="min-width:550px;">
-                         <h3><label>Slider Background color</label></h3>
-                        <div class="inside">
-                             <table>
-                               <tr>
-                                 <td>
-                                   <input type="text" id="scollerBackground" size="30" name="scollerBackground" value="<?php echo $settings['scollerBackground']; ?>" style="width:100px;">
-                                   <div style="clear:both"></div>
-                                   <div></div>
-                                 </td>
-                               </tr>
-                             </table>
-                             
-                             <div style="clear:both"></div>
-                         </div>
-                      </div>
-                      <div class="stuffbox" id="namediv" style="min-width:550px;">
-                         <h3><label>Visible</label></h3>
-                        <div class="inside">
-                             <table>
-                               <tr>
-                                 <td>
-                                   <input type="text" id="visible" size="30" name="visible" value="<?php echo $settings['visible']; ?>" style="width:100px;">
-                                   <div style="clear:both">This will decide your slider width automatically</div>
-                                   <div></div>
-                                 </td>
-                               </tr>
-                             </table>
-                             specifies the number of items visible at all times within the slider.
-                             <div style="clear:both"></div>
-                           
-                         </div>
-                      </div>
-                      <div class="stuffbox" id="namediv" style="min-width:550px;">
-                         <h3><label>Scroll</label></h3>
-                        <div class="inside">
-                             <table>
-                               <tr>
-                                 <td>
-                                   <input type="text" id="scroll" size="30" name="scroll" value="<?php echo $settings['scroll']; ?>" style="width:100px;">
-                                   <div style="clear:both"></div>
-                                   <div></div>
-                                 </td>
-                               </tr>
-                             </table>
-                             You can specify the number of items to scroll when you click the next or prev buttons.
-                             <div style="clear:both"></div>
-                         </div>
-                      </div>
-                       <div class="stuffbox" id="namediv" style="min-width:550px;">
-                         <h3><label>Pause On Mouse Over ?</label></h3>
-                        <div class="inside">
-                             <table>
-                               <tr>
-                                 <td>
-                                   <input type="checkbox" id="pauseonmouseover" size="30" name="pauseonmouseover" value="" <?php if($settings['pauseonmouseover']==true){echo "checked='checked'";} ?> style="width:20px;">&nbsp;Pause On Mouse Over ? 
-                                   <div style="clear:both"></div>
-                                   <div></div>
-                                 </td>
-                               </tr>
-                             </table>
-                             <div style="clear:both"></div>
-                         </div>
-                      </div>
-                     <!-- <div class="stuffbox" id="namediv" style="min-width:550px;">
-                         <h3><label>Slider Width</label></h3>
-                        <div class="inside">
-                             <table>
-                               <tr>
-                                 <td>
-                                   <input type="text" id="scrollerwidth" size="30" name="scrollerwidth" value="<?php echo $settings['scrollerwidth']; ?>" style="width:100px;">
+                                  </div>
+                              </div>
+                              <div class="stuffbox" id="namediv" style="width:100%;">
+                                  <h3><label >Speed</label></h3>
+                                  <div class="inside">
+                                      <table>
+                                          <tr>
+                                              <td>
+                                                  <input type="text" id="speed" size="30" name="speed" value="<?php echo $settings['speed']; ?>" style="width:100px;">
+                                                  <div style="clear:both"></div>
+                                                  <div></div>
+                                              </td>
+                                          </tr>
+                                      </table>
                                       <div style="clear:both"></div>
-                                      <div></div>
-                                 </td>
-                               </tr>
-                             </table>
-                             <div style="clear:both"></div>
-                           
-                         </div>
-                      </div>-->
-                      <div class="stuffbox" id="namediv" style="min-width:550px;">
-                         <h3><label>Image Height</label></h3>
-                        <div class="inside">
-                             <table>
-                               <tr>
-                                 <td>
-                                   <input type="text" id="imageheight" size="30" name="imageheight" value="<?php echo $settings['imageheight']; ?>" style="width:100px;">
-                                   <div style="clear:both"></div>
-                                   <div></div>
-                                 </td>
-                               </tr>
-                             </table>
-                             
-                             <div style="clear:both"></div>
-                         </div>
+
+                                  </div>
+                              </div>
+                              <div class="stuffbox" id="namediv" style="width:100%;">
+                                  <h3><label >Pause</label></h3>
+                                  <div class="inside">
+                                      <table>
+                                          <tr>
+                                              <td>
+                                                  <input type="text" id="pause" size="30" name="pause" value="<?php echo $settings['pause']; ?>" style="width:100px;">
+                                                  <div style="clear:both"></div>
+                                                  <div></div>
+                                              </td>
+                                          </tr>
+                                      </table>
+                                      <div style="clear:both">The amount of time (in ms) between each auto transition</div>
+
+                                  </div>
+                              </div>
+                              <div class="stuffbox" id="namediv" style="width:100%;">
+                                  <h3><label >Circular Slider ?</label></h3>
+                                  <div class="inside">
+                                      <table>
+                                          <tr>
+                                              <td>
+                                                  <input type="checkbox" id="circular" size="30" name="circular" value="" <?php if($settings['circular']==true){echo "checked='checked'";} ?> style="width:20px;">&nbsp;Circular Slider ? 
+                                                  <div style="clear:both"></div>
+                                                  <div></div>
+                                              </td>
+                                          </tr>
+                                      </table>
+                                      <div style="clear:both"></div>
+
+                                  </div>
+                              </div>
+                              <div class="stuffbox" id="namediv" style="width:100%;">
+                                  <h3><label>Slider Background color</label></h3>
+                                  <div class="inside">
+                                      <table>
+                                          <tr>
+                                              <td>
+                                                  <input type="text" id="scollerBackground" size="30" name="scollerBackground" value="<?php echo $settings['scollerBackground']; ?>" style="width:100px;">
+                                                  <div style="clear:both"></div>
+                                                  <div></div>
+                                              </td>
+                                          </tr>
+                                      </table>
+
+                                      <div style="clear:both"></div>
+                                  </div>
+                              </div>
+                              <div class="stuffbox" id="namediv" style="width:100%;">
+                                  <h3><label>Visible</label></h3>
+                                  <div class="inside">
+                                      <table>
+                                          <tr>
+                                              <td>
+                                                  <input type="text" id="visible" size="30" name="visible" value="<?php echo $settings['visible']; ?>" style="width:100px;">
+                                                  <div style="clear:both">This will decide your slider width automatically</div>
+                                                  <div></div>
+                                              </td>
+                                          </tr>
+                                      </table>
+                                      specifies the number of items visible at all times within the slider.
+                                      <div style="clear:both"></div>
+
+                                  </div>
+                              </div>
+                              <div class="stuffbox" id="namediv" style="width:100%;">
+                                  <h3><label>Scroll</label></h3>
+                                  <div class="inside">
+                                      <table>
+                                          <tr>
+                                              <td>
+                                                  <input type="text" id="scroll" size="30" name="scroll" value="<?php echo $settings['scroll']; ?>" style="width:100px;">
+                                                  <div style="clear:both"></div>
+                                                  <div></div>
+                                              </td>
+                                          </tr>
+                                      </table>
+                                      You can specify the number of items to scroll when you click the next or prev buttons.
+                                      <div style="clear:both"></div>
+                                  </div>
+                              </div>
+                              <div class="stuffbox" id="namediv" style="width:100%;">
+                                  <h3><label>Pause On Mouse Over ?</label></h3>
+                                  <div class="inside">
+                                      <table>
+                                          <tr>
+                                              <td>
+                                                  <input type="checkbox" id="pauseonmouseover" size="30" name="pauseonmouseover" value="" <?php if($settings['pauseonmouseover']==true){echo "checked='checked'";} ?> style="width:20px;">&nbsp;Pause On Mouse Over ? 
+                                                  <div style="clear:both"></div>
+                                                  <div></div>
+                                              </td>
+                                          </tr>
+                                      </table>
+                                      <div style="clear:both"></div>
+                                  </div>
+                              </div>
+                              <!-- <div class="stuffbox" id="namediv" style="width:100%;">
+                              <h3><label>Slider Width</label></h3>
+                              <div class="inside">
+                              <table>
+                              <tr>
+                              <td>
+                              <input type="text" id="scrollerwidth" size="30" name="scrollerwidth" value="<?php echo $settings['scrollerwidth']; ?>" style="width:100px;">
+                              <div style="clear:both"></div>
+                              <div></div>
+                              </td>
+                              </tr>
+                              </table>
+                              <div style="clear:both"></div>
+
+                              </div>
+                              </div>-->
+                              <div class="stuffbox" id="namediv" style="width:100%;">
+                                  <h3><label>Image Height</label></h3>
+                                  <div class="inside">
+                                      <table>
+                                          <tr>
+                                              <td>
+                                                  <input type="text" id="imageheight" size="30" name="imageheight" value="<?php echo $settings['imageheight']; ?>" style="width:100px;">
+                                                  <div style="clear:both"></div>
+                                                  <div></div>
+                                              </td>
+                                          </tr>
+                                      </table>
+
+                                      <div style="clear:both"></div>
+                                  </div>
+                              </div>
+                              <div class="stuffbox" id="namediv" style="width:100%;">
+                                  <h3><label>Image Width</label></h3>
+                                  <div class="inside">
+                                      <table>
+                                          <tr>
+                                              <td>
+                                                  <input type="text" id="imagewidth" size="30" name="imagewidth" value="<?php echo $settings['imagewidth']; ?>" style="width:100px;">
+                                                  <div style="clear:both"></div>
+                                                  <div></div>
+                                              </td>
+                                          </tr>
+                                      </table>
+
+                                      <div style="clear:both"></div>
+                                  </div>
+                              </div>
+                              <div class="stuffbox" id="namediv" style="width:100%;">
+                                  <h3><label>Image Margin</label></h3>
+                                  <div class="inside">
+                                      <table>
+                                          <tr>
+                                              <td>
+                                                  <input type="text" id="imageMargin" size="30" name="imageMargin" value="<?php echo $settings['imageMargin']; ?>" style="width:100px;">
+                                                  <div style="clear:both;padding-top:5px">Gap between two images </div>
+                                                  <div></div>
+                                              </td>
+                                          </tr>
+                                      </table>
+
+                                      <div style="clear:both"></div>
+                                  </div>
+                              </div>
+
+                              <input type="submit"  name="btnsave" id="btnsave" value="Save Changes" class="button-primary">&nbsp;&nbsp;<input type="button" name="cancle" id="cancle" value="Cancel" class="button-primary" onclick="location.href='admin.php?page=responsive_thumbnail_slider_image_management'">
+
+                          </form> 
+                          <script type="text/javascript">
+
+                              var $n = jQuery.noConflict();  
+                              $n(document).ready(function() {
+
+                                      $n("#scrollersettiings").validate({
+                                              rules: {
+                                                  isauto: {
+                                                      required:true
+                                                  },speed: {
+                                                      required:true, 
+                                                      number:true, 
+                                                      maxlength:15
+                                                  },pause: {
+                                                      required:true, 
+                                                      number:true, 
+                                                      maxlength:15
+                                                  },
+                                                  visible:{
+                                                      required:true,  
+                                                      number:true,
+                                                      maxlength:15
+
+                                                  },
+                                                  scroll:{
+                                                      required:true,
+                                                      number:true,
+                                                      maxlength:15  
+                                                  },
+                                                  scollerBackground:{
+                                                      required:true,
+                                                      maxlength:7  
+                                                  },
+                                                  /*scrollerwidth:{
+                                                  required:true,
+                                                  number:true,
+                                                  maxlength:15    
+                                                  },*/imageheight:{
+                                                      required:true,
+                                                      number:true,
+                                                      maxlength:15    
+                                                  },
+                                                  imagewidth:{
+                                                      required:true,
+                                                      number:true,
+                                                      maxlength:15    
+                                                  },imageMargin:{
+                                                      required:true,
+                                                      number:true,
+                                                      maxlength:15    
+                                                  }
+
+                                              },
+                                              errorClass: "image_error",
+                                              errorPlacement: function(error, element) {
+                                                  error.appendTo( element.next().next());
+                                              } 
+
+
+                                      })
+                              });
+
+                          </script> 
+
                       </div>
-                      <div class="stuffbox" id="namediv" style="min-width:550px;">
-                         <h3><label>Image Width</label></h3>
-                        <div class="inside">
-                             <table>
-                               <tr>
-                                 <td>
-                                   <input type="text" id="imagewidth" size="30" name="imagewidth" value="<?php echo $settings['imagewidth']; ?>" style="width:100px;">
-                                   <div style="clear:both"></div>
-                                   <div></div>
-                                 </td>
-                               </tr>
-                             </table>
-                             
-                             <div style="clear:both"></div>
-                         </div>
-                      </div>
-                      <div class="stuffbox" id="namediv" style="min-width:550px;">
-                         <h3><label>Image Margin</label></h3>
-                        <div class="inside">
-                             <table>
-                               <tr>
-                                 <td>
-                                   <input type="text" id="imageMargin" size="30" name="imageMargin" value="<?php echo $settings['imageMargin']; ?>" style="width:100px;">
-                                   <div style="clear:both;padding-top:5px">Gap between two images </div>
-                                   <div></div>
-                                 </td>
-                               </tr>
-                             </table>
-                             
-                             <div style="clear:both"></div>
-                         </div>
-                      </div>
-                      
-                    <input type="submit"  name="btnsave" id="btnsave" value="Save Changes" class="button-primary">&nbsp;&nbsp;<input type="button" name="cancle" id="cancle" value="Cancel" class="button-primary" onclick="location.href='admin.php?page=responsive_thumbnail_slider_image_management'">
-                                  
-                 </form> 
-                  <script type="text/javascript">
-                  
-                     var $n = jQuery.noConflict();  
-                     $n(document).ready(function() {
-                     
-                        $n("#scrollersettiings").validate({
-                            rules: {
-                                      isauto: {
-                                      required:true
-                                    },speed: {
-                                      required:true, 
-                                      number:true, 
-                                      maxlength:15
-                                    },pause: {
-                                      required:true, 
-                                      number:true, 
-                                      maxlength:15
-                                    },
-                                    visible:{
-                                        required:true,  
-                                        number:true,
-                                        maxlength:15
-                                        
-                                    },
-                                    scroll:{
-                                      required:true,
-                                      number:true,
-                                      maxlength:15  
-                                    },
-                                    scollerBackground:{
-                                      required:true,
-                                      maxlength:7  
-                                    },
-                                    /*scrollerwidth:{
-                                      required:true,
-                                      number:true,
-                                      maxlength:15    
-                                    },*/imageheight:{
-                                      required:true,
-                                      number:true,
-                                      maxlength:15    
-                                    },
-                                    imagewidth:{
-                                      required:true,
-                                      number:true,
-                                      maxlength:15    
-                                    },imageMargin:{
-                                      required:true,
-                                      number:true,
-                                      maxlength:15    
-                                    }
-                                    
-                               },
-                                 errorClass: "image_error",
-                                 errorPlacement: function(error, element) {
-                                 error.appendTo( element.next().next());
-                             } 
-                             
+                  </div>
+              </div>  
+          </div>      
+      </div>
+      <div id="postbox-container-1" class="postbox-container" > 
 
-                        })
-                    });
-                  
-                </script> 
+          <div class="postbox"> 
+              <h3 class="hndle"><span></span>Access All Themes In One Price</h3> 
+              <div class="inside">
+                  <center><a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=11715_0_1_10" target="_blank"><img border="0" src="http://www.elegantthemes.com/affiliates/banners/300x250.gif" width="250" height="250"></a></center>
 
-                </div>
-          </div>
-        </div>  
-     </div>      
-</div>
-     <div id="poststuff" class="metabox-holder has-right-sidebar" style="float:right;width:30%;"> 
-                         
-   <div class="postbox"> 
-      <h3 class="hndle"><span></span>Recommended WordPress Themes</h3> 
-      <div class="inside">
-           <center><a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=11715_0_1_10" target="_blank"><img border="0" src="http://www.elegantthemes.com/affiliates/banners/300x250.gif" width="300" height="250"></a></center>
+                  <div style="margin:10px 5px">
 
-          <div style="margin:10px 5px">
-  
-          </div>
-  </div></div>
-   <div class="postbox"> 
-      <h3 class="hndle"><span></span>Recommended WordPress Frameworks</h3> 
-      <div class="inside">
-           <center><a target="_blank" href="http://www.shareasale.com/r.cfm?b=202505&amp;u=675922&amp;m=24570&amp;urllink=&amp;afftrack="><img src="http://www.shareasale.com/image/24570/thesis-300x250-1.png" alt="Thesis Theme for WordPress:  Options Galore and a Helpful Support Community" border="0" /></a></center>
+                  </div>
+              </div></div>
+          <div class="postbox"> 
+              <h3 class="hndle"><span></span>Recommended WordPress Hostings</h3> 
+              <div class="inside">
+                  <center><a target="_blank" href="http://www.shareasale.com/r.cfm?b=531904&u=675922&m=41388&urllink=&afftrack="><img src="http://www.shareasale.com/image/41388/sas_banner_250x250.jpg" alt="WP Engine" border="0"></a></center>
+                  <div style="margin:10px 5px">
+                  </div>
+              </div></div>
 
-          <div style="margin:10px 5px">
-  
-          </div>
-  </div></div>
-   
-   </div>      
-     
-    
-<div class="clear"></div></div>  
+      </div>      
+     <div class="clear"></div>
+  </div>  
+ </div> 
 <?php
    }        
    function responsive_thumbnail_image_management(){
@@ -517,243 +514,287 @@
           
       
    ?> 
-     <div class="wrap">
-        <style type="text/css">
-          .pagination {
-            clear:both;
-            padding:20px 0;
-            position:relative;
-            font-size:11px;
-            line-height:13px;
-            }
-             
-            .pagination span, .pagination a {
-            display:block;
-            float:left;
-            margin: 2px 2px 2px 0;
-            padding:6px 9px 5px 9px;
-            text-decoration:none;
-            width:auto;
-            color:#fff;
-            background: #555;
-            }
-             
-            .pagination a:hover{
-            color:#fff;
-            background: #3279BB;
-            }
-             
-            .pagination .current{
-            padding:6px 9px 5px 9px;
-            background: #3279BB;
-            color:#fff;
-            }
-        </style>
-       <div class="wrap">
-          <table><tr><td><a href="https://twitter.com/FreeAdsPost" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @FreeAdsPost</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></td>
-                <td>
-                <a target="_blank" title="Donate" href="http://my-php-scripts.net/donate-wordpress_image_thumbnail.php">
-                <img id="help us for free plugin" height="30" width="90" src="http://www.postfreeadvertising.com/images/paypaldonate.jpg" border="0" alt="help us for free plugin" title="help us for free plugin">
-                </a>
-                </td>
-                </tr>
-                </table>
-                 
-        <?php 
-             
-             $messages=get_option('responsive_thumbnail_slider_messages'); 
-             $type='';
-             $message='';
-             if(isset($messages['type']) and $messages['type']!=""){
-             
-                $type=$messages['type'];
-                $message=$messages['message'];
-                
-             }  
-             
-  
-             if($type=='err'){ echo "<div class='errMsg'>"; echo $message; echo "</div>";}
-             else if($type=='succ'){ echo "<div class='succMsg'>"; echo $message; echo "</div>";}
-             
-             
-             update_option('responsive_thumbnail_slider_messages', array());     
-        ?>
+          <style type="text/css">
+              .pagination {
+                  clear:both;
+                  padding:20px 0;
+                  position:relative;
+                  font-size:11px;
+                  line-height:13px;
+              }
 
-       <div style="width: 100%;">  
-        <div style="float:left;width:69%;" >
-        <span><h3 style="color: blue;"><a target="_blank" href="http://www.my-php-scripts.net/index.php/Wordpress/wordpress-responsive-thumbnail-slider-pro.html">Update to Responsive Thumbnail Slider Pro Version</a></h3></span>
-        <div class="icon32 icon32-posts-post" id="icon-edit"><br></div>
-        <h2>Images <a class="button add-new-h2" href="admin.php?page=responsive_thumbnail_slider_image_management&action=addedit">Add New</a> </h2>
-        <br/>    
-        
-        <form method="POST" action="admin.php?page=responsive_thumbnail_slider_image_management&action=deleteselected"  id="posts-filter">
-              <div class="alignleft actions">
-                <select name="action_upper">
-                    <option selected="selected" value="-1">Bulk Actions</option>
-                    <option value="delete">delete</option>
-                </select>
-                <input type="submit" value="Apply" class="button-secondary action" id="deleteselected" name="deleteselected">
-            </div>
-         <br class="clear">
-        <?php 
-        
-          $settings=get_option('responsive_thumbnail_slider_settings'); 
-          $visibleImages=$settings['visible'];
-          $query="SELECT * FROM ".$wpdb->prefix."responsive_thumbnail_slider order by createdon desc";
-          $rows=$wpdb->get_results($query,'ARRAY_A');
-          $rowCount=sizeof($rows);
-          
-        ?>
-        <?php if($rowCount<$visibleImages){ ?>
-            <h4 style="color: green"> Current slider setting - Total visible images <?php echo $visibleImages; ?></h4>
-            <h4 style="color: green">Please add atleast <?php echo $visibleImages; ?> images</h4>
-        <?php } else{
-            echo "<br/>";
-        }?>
-         <table cellspacing="0" class="wp-list-table widefat fixed posts" style="width:500px">
-         <thead>
-         <tr>
-         <th style="width:30px" class="manage-column column-cb check-column" scope="col"><input type="checkbox"></th>
-        <th style="width:200px" class="manage-column column-title sortable desc" scope="col"><span>Title</span></th>
-        <th style="width:100px"  class="manage-column column-author sortable desc" scope="col"><span>Published On</span></th>
-        <th style="width:50px" class="manage-column column-author sortable desc" scope="col"><span>Edit</span></th>
-        <th style="width:50px" class="manage-column column-author sortable desc" scope="col"><span>Delete</span></th>
-        </thead>
+              .pagination span, .pagination a {
+                  display:block;
+                  float:left;
+                  margin: 2px 2px 2px 0;
+                  padding:6px 9px 5px 9px;
+                  text-decoration:none;
+                  width:auto;
+                  color:#fff;
+                  background: #555;
+              }
 
-    <tfoot>
-    <tr>
-        <th  style="width:30px" class="manage-column column-cb check-column" scope="col"><input type="checkbox"></th>
-        <th style="width:200px" class="manage-column column-title sortable desc" scope="col"><span>Title</span></th>
-        <th style="width:100px" class="manage-column column-author sortable desc" scope="col"><span>Published On</span></th>
-        <th style="width:50px" class="manage-column column-author sortable desc" scope="col"><span>Edit</span></th>
-        <th style="width:50px" class="manage-column column-author sortable desc" scope="col"><span>Delete</span></th>
-    </tr>
-    </tfoot>
+              .pagination a:hover{
+                  color:#fff;
+                  background: #3279BB;
+              }
 
-    <tbody id="the-list">
-                   <?php
-                     
-                    if(count($rows) > 0){
-                    
-                          global $wp_rewrite;
-                          $rows_per_page = 5;
-                            
-                          $current = (isset($_GET['paged'])) ? ($_GET['paged']) : 1;
-                         $pagination_args = array(
-                           'base' => @add_query_arg('paged','%#%'),
-                           'format' => '',
-                           'total' => ceil(sizeof($rows)/$rows_per_page),
-                           'current' => $current,
-                           'show_all' => false,
-                           'type' => 'plain',
-                         );
-                        
-                      
-                      $start = ($current - 1) * $rows_per_page;
-                      $end = $start + $rows_per_page;
-                      $end = (sizeof($rows) < $end) ? sizeof($rows) : $end;
-                          
-                      for ($i=$start;$i < $end ;++$i ) {
-                                 
-                               $row = $rows[$i];
-                               $id=$row['id'];
-                               $editlink="admin.php?page=responsive_thumbnail_slider_image_management&action=addedit&id=$id";
-                               $deletelink="admin.php?page=responsive_thumbnail_slider_image_management&action=delete&id=$id";
-                               
-                            ?>
-                            <tr valign="top" class="alternate author-self status-publish format-default iedit" id="post-113">
-                                <th style="width:30px" class="check-column" scope="row"><input type="checkbox" value="<?php echo $row['id'] ?>" name="thumbnails[]"></th>
-                                <td style="width:200px" class="post-title page-title column-title"><strong><?php echo stripslashes($row['title']) ?></strong></td>  
-                                <td style="width:100px" class="date column-date"><abbr title="2011/12/22 11:57:24 AM"><?php echo $row['createdon'] ?></td>
-                                <td style="width:50px" class="post-title page-title column-title"><strong><a href='<?php echo $editlink; ?>' title="edit">Edit</a></strong></td>  
-                                <td style="width:50px" class="post-title page-title column-title"><strong><a href='<?php echo $deletelink; ?>' onclick="return confirmDelete();"  title="delete">Delete</a> </strong></td>  
-                           </tr>
-                     <?php 
-                             } 
-                    }
-                   else{
-                       ?>
-                   
-                      <tr valign="top" class="alternate author-self status-publish format-default iedit" id="post-113">
-                                <td colspan="5" class="post-title page-title column-title" align="center"><strong>No Images Found</strong></td>  
-                           </tr>
+              .pagination .current{
+                  padding:6px 9px 5px 9px;
+                  background: #3279BB;
+                  color:#fff;
+              }
+          </style>
+          <!--[if !IE]><!-->
+          <style type="text/css">
+
+              @media only screen and (max-width: 800px) {
+
+                  /* Force table to not be like tables anymore */
+                  #no-more-tables table, 
+                  #no-more-tables thead, 
+                  #no-more-tables tbody, 
+                  #no-more-tables th, 
+                  #no-more-tables td, 
+                  #no-more-tables tr { 
+                      display: block; 
+
+                  }
+
+                  /* Hide table headers (but not display: none;, for accessibility) */
+                  #no-more-tables thead tr { 
+                      position: absolute;
+                      top: -9999px;
+                      left: -9999px;
+                  }
+
+                  #no-more-tables tr { border: 1px solid #ccc; }
+
+                  #no-more-tables td { 
+                      /* Behave  like a "row" */
+                      border: none;
+                      border-bottom: 1px solid #eee; 
+                      position: relative;
+                      padding-left: 50%; 
+                      white-space: normal;
+                      text-align:left;      
+                  }
+
+                  #no-more-tables td:before { 
+                      /* Now like a table header */
+                      position: absolute;
+                      /* Top/left values mimic padding */
+                      top: 6px;
+                      left: 6px;
+                      width: 45%; 
+                      padding-right: 10px; 
+                      white-space: nowrap;
+                      text-align:left;
+                      font-weight: bold;
+                  }
+
+                  /*
+                  Label the data
+                  */
+                  #no-more-tables td:before { content: attr(data-title); }
+              }
+          </style>
+          <!--<![endif]-->
+          <div id="poststuff"  class="wrap">
+              <div id="post-body" class="metabox-holder columns-2">
+                  <table><tr><td><a href="https://twitter.com/FreeAdsPost" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @FreeAdsPost</a>
+                              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></td>
+                          <td>
+                              <a target="_blank" title="Donate" href="http://my-php-scripts.net/donate-wordpress_image_thumbnail.php">
+                                  <img id="help us for free plugin" height="30" width="90" src="http://www.postfreeadvertising.com/images/paypaldonate.jpg" border="0" alt="help us for free plugin" title="help us for free plugin">
+                              </a>
+                          </td>
+                      </tr>
+                  </table>
+
                   <?php 
-                   } 
-                 ?>      
-        </tbody>
-  </table>
-  <?php
-    if(sizeof($rows)>0){
-     echo "<div class='pagination' style='padding-top:10px'>";
-     echo paginate_links($pagination_args);
-     echo "</div>";
-    }
-  ?>
-    <br/>
-    <div class="alignleft actions">
-        <select name="action">
-            <option selected="selected" value="-1">Bulk Actions</option>
-            <option value="delete">delete</option>
-        </select>
-        <input type="submit" value="Apply" class="button-secondary action" id="deleteselected" name="deleteselected">
-    </div>
 
-    </form>
-        <script type="text/JavaScript">
+                      $messages=get_option('responsive_thumbnail_slider_messages'); 
+                      $type='';
+                      $message='';
+                      if(isset($messages['type']) and $messages['type']!=""){
 
-            function  confirmDelete(){
-            var agree=confirm("Are you sure you want to delete this image ?");
-            if (agree)
-                 return true ;
-            else
-                 return false;
-        }
-     </script>
+                          $type=$messages['type'];
+                          $message=$messages['message'];
 
-        <br class="clear">
-          <h3>To print this slider into WordPress Post/Page use bellow code</h3>
-    <pre class="printCode">
-      [print_responsive_thumbnail_slider]
-    </pre>
-    <div class="clear"></div>
-    <h3>To print this slider into WordPress theme/template PHP files use bellow code</h3>
-    <pre class="printCode">
-      echo do_shortcode('[print_responsive_thumbnail_slider]'); 
-    </pre>
-    <div class="clear"></div>
-        </div>
-        <div id="poststuff" class="metabox-holder has-right-sidebar" style="float:right;width:30%;"> 
-           <div class="postbox"> 
-              <h3 class="hndle"><span></span>Best Hosting for WordPress</h3> 
-              <div class="inside">
-                   <center><a href="http://www.siteground.com" onClick="this.href='http://www.siteground.com/wordpress-hosting.htm?afbannercode=2efd07dfb14877d963d9e75d5057b4a8'" ><img src="https://ua.siteground.com/img/banners/application/wordpress/250x250.gif" alt="Web Hosting" width="250" height="250" border="0"></a></center>
+                      }  
 
-                  <div style="margin:10px 5px">
-          
+
+                      if($type=='err'){ echo "<div class='errMsg'>"; echo $message; echo "</div>";}
+                      else if($type=='succ'){ echo "<div class='succMsg'>"; echo $message; echo "</div>";}
+
+
+                      update_option('responsive_thumbnail_slider_messages', array());     
+                  ?>
+
+                  <div id="post-body-content" >  
+                      <span><h3 style="color: blue;"><a target="_blank" href="http://www.my-php-scripts.net/index.php/Wordpress/wordpress-responsive-thumbnail-slider-pro.html">UPGRADE TO PRO VERSION</a></h3></span>
+                      <div class="icon32 icon32-posts-post" id="icon-edit"><br></div>
+                      <h2>Images <a class="button add-new-h2" href="admin.php?page=responsive_thumbnail_slider_image_management&action=addedit">Add New</a> </h2>
+
+
+                      <form method="POST" action="admin.php?page=responsive_thumbnail_slider_image_management&action=deleteselected"  id="posts-filter">
+                          <div class="alignleft actions">
+                              <select name="action_upper">
+                                  <option selected="selected" value="-1">Bulk Actions</option>
+                                  <option value="delete">delete</option>
+                              </select>
+                              <input type="submit" value="Apply" class="button-secondary action" id="deleteselected" name="deleteselected">
+                          </div>
+                          <br class="clear">
+                          <?php 
+
+                              $settings=get_option('responsive_thumbnail_slider_settings'); 
+                              $visibleImages=$settings['visible'];
+                              $query="SELECT * FROM ".$wpdb->prefix."responsive_thumbnail_slider order by createdon desc";
+                              $rows=$wpdb->get_results($query,'ARRAY_A');
+                              $rowCount=sizeof($rows);
+
+                          ?>
+                          <?php if($rowCount<$visibleImages){ ?>
+                              <h4 style="color: green"> Current slider setting - Total visible images <?php echo $visibleImages; ?></h4>
+                              <h4 style="color: green">Please add atleast <?php echo $visibleImages; ?> images</h4>
+                              <?php } else{
+                                  echo "<br/>";
+                          }?>
+                          <div id="no-more-tables">
+                          <table cellspacing="0" id="gridTbl" class="table-bordered table-striped table-condensed cf" >
+                              <thead>
+                                  <tr>
+                                  <th class="manage-column column-cb check-column" scope="col"><input type="checkbox"></th>
+                                  <th><span>Title</span></th>
+                                  <th><span>Published On</span></th>
+                                  <th><span>Edit</span></th>
+                                  <th><span>Delete</span></th>
+                              </thead>
+                              
+                              <tbody id="the-list">
+                                  <?php
+
+                                      if(count($rows) > 0){
+
+                                          global $wp_rewrite;
+                                          $rows_per_page = 5;
+
+                                          $current = (isset($_GET['paged'])) ? ($_GET['paged']) : 1;
+                                          $pagination_args = array(
+                                              'base' => @add_query_arg('paged','%#%'),
+                                              'format' => '',
+                                              'total' => ceil(sizeof($rows)/$rows_per_page),
+                                              'current' => $current,
+                                              'show_all' => false,
+                                              'type' => 'plain',
+                                          );
+
+
+                                          $start = ($current - 1) * $rows_per_page;
+                                          $end = $start + $rows_per_page;
+                                          $end = (sizeof($rows) < $end) ? sizeof($rows) : $end;
+
+                                          for ($i=$start;$i < $end ;++$i ) {
+
+                                              $row = $rows[$i];
+                                              $id=$row['id'];
+                                              $editlink="admin.php?page=responsive_thumbnail_slider_image_management&action=addedit&id=$id";
+                                              $deletelink="admin.php?page=responsive_thumbnail_slider_image_management&action=delete&id=$id";
+
+                                          ?>
+                                          <tr valign="top" >
+                                              <td class="alignCenter check-column"   data-title="Select Record" ><input type="checkbox" value="<?php echo $row['id'] ?>" name="thumbnails[]"></td>
+                                              <td   data-title="Title" ><strong><?php echo stripslashes($row['title']) ?></strong></td>  
+                                              <td class="alignCenter"   data-title="Published On" ><?php echo $row['createdon'] ?></td>
+                                              <td class="alignCenter"   data-title="Edit Record" ><strong><a href='<?php echo $editlink; ?>' title="edit">Edit</a></strong></td>  
+                                              <td class="alignCenter"   data-title="Delete Record" ><strong><a href='<?php echo $deletelink; ?>' onclick="return confirmDelete();"  title="delete">Delete</a> </strong></td>  
+                                          </tr>
+                                          <?php 
+                                          } 
+                                      }
+                                      else{
+                                      ?>
+
+                                         <tr valign="top" class="" id="">
+                                           <td colspan="5" data-title="No Record" align="center"><strong>No Images Found</strong></td>  
+                                         </tr>
+                 
+                                      <?php 
+                                      } 
+                                  ?>      
+                              </tbody>
+                          </table>
+                          </div>
+                          <?php
+                              if(sizeof($rows)>0){
+                                  echo "<div class='pagination' style='padding-top:10px'>";
+                                  echo paginate_links($pagination_args);
+                                  echo "</div>";
+                              }
+                          ?>
+                          <br/>
+                          <div class="alignleft actions">
+                              <select name="action">
+                                  <option selected="selected" value="-1">Bulk Actions</option>
+                                  <option value="delete">delete</option>
+                              </select>
+                              <input type="submit" value="Apply" class="button-secondary action" id="deleteselected" name="deleteselected">
+                          </div>
+
+                      </form>
+                      <script type="text/JavaScript">
+
+                          function  confirmDelete(){
+                              var agree=confirm("Are you sure you want to delete this image ?");
+                              if (agree)
+                                  return true ;
+                              else
+                                  return false;
+                          }
+                      </script>
+
+                      <br class="clear">
+                      <h3>To print this slider into WordPress Post/Page use bellow code</h3>
+                      <pre class="printCode">[print_responsive_thumbnail_slider]</pre>
+                      <div class="clear"></div>
+                      <h3>To print this slider into WordPress theme/template PHP files use bellow code</h3>
+                      <pre class="printCode">echo do_shortcode('[print_responsive_thumbnail_slider]'); </pre>
+                      <div class="clear"></div>
                   </div>
-          </div></div>
-             <div class="postbox"> 
-              <h3 class="hndle"><span></span>Recommended WordPress SEO Tools</h3> 
-              <div class="inside">
-                   <center><a href="http://www.semrush.com/sem.html?ref=961672083"> <img width="300" height="250" src="http://www.berush.com/images/240x240_semrush_en.png" /></a></center>
+                  <div id="postbox-container-1" class="postbox-container"> 
+                      <div class="postbox"> 
+                          <h3 class="hndle"><span></span>Recommended WordPress Themes</h3> 
+                          <div class="inside">
+                              <center><a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=11715_0_1_10" target="_blank"><img border="0" src="http://www.elegantthemes.com/affiliates/banners/300x250.gif" width="250" height="250"></a></center>
+                              <div style="margin:10px 5px">
 
-                  <div style="margin:10px 5px">
-          
-                  </div>
-          </div></div>
-           
+                              </div>
+                          </div></div>
+                      <div class="postbox"> 
+                          <h3 class="hndle"><span></span>Recommended WordPress SEO Tools</h3> 
+                          <div class="inside">
+                              <center><a href="http://www.semrush.com/sem.html?ref=961672083"> <img width="250" height="250" src="http://www.berush.com/images/240x240_semrush_en.png" /></a></center>
 
-           
-           
-           </div>
-         
-        <div style="clear: both;"></div>
-        <?php $url = plugin_dir_url(__FILE__);  ?>
-        
-        
-      </div>  
-    </div>  
+                              <div style="margin:10px 5px">
+
+                              </div>
+                          </div>
+
+
+
+
+                      </div>
+
+                      <div style="clear: both;"></div>
+                      <?php $url = plugin_dir_url(__FILE__);  ?>
+
+
+                  </div>  
+              </div>
+          </div>
+     
 <?php 
   }   
   else if(strtolower($action)==strtolower('addedit')){
@@ -893,185 +934,185 @@
    else{ 
         
   ?>
-     <div style="width: 100%;">  
-        <div style="float:left;width:69%;" >
-            <div class="wrap">
-          <?php if(isset($_GET['id']) and $_GET['id']>0)
-          { 
-               
-                
-                $id= $_GET['id'];
-                $query="SELECT * FROM ".$wpdb->prefix."responsive_thumbnail_slider WHERE id=$id";
-                $myrow  = $wpdb->get_row($query);
-                
-                if(is_object($myrow)){
-                
-                  $title=stripslashes($myrow->title);
-                  $image_link=$myrow->custom_link;
-                  $image_name=stripslashes($myrow->image_name);
-                  
-                }   
-              
-          ?>
-           
-            <h2>Update Image </h2>
-               
-          <?php }else{ 
-                  
-                  $title='';
-                  $image_link='';
-                  $image_name='';
-          
-          ?>
-          <span><h3 style="color: blue;"><a target="_blank" href="http://www.my-php-scripts.net/index.php/Wordpress/wordpress-responsive-thumbnail-slider-pro.html">Update to Responsive Thumbnail Slider Pro Version</a></h3></span>
-          <h2>Add Image </h2>
-          <?php } ?>
-            
-            <br/>
-            <div id="poststuff">
-              <div id="post-body" class="metabox-holder columns-2">
-                <div id="post-body-content">
-                  <form method="post" action="" id="addimage" name="addimage" enctype="multipart/form-data" >
-                
-                      <div class="stuffbox" id="namediv" style="min-width:550px;">
-                         <h3><label for="link_name">Image Title</label></h3>
-                        <div class="inside">
-                            <input type="text" id="imagetitle"  tabindex="1" size="30" name="imagetitle" value="<?php echo $title;?>">
-                             <div style="clear:both"></div>
-                             <div></div>
-                             <div style="clear:both"></div>
-                            <p><?php _e('Used in image alt for seo'); ?></p>
-                         </div>
-                      </div>
-                      <div class="stuffbox" id="namediv" style="min-width:550px;">
-                         <h3><label for="link_name">Image Url(<?php _e('On click redirect to this url.'); ?>)</label></h3>
-                        <div class="inside">
-                            <input type="text" id="imageurl" class="url"  tabindex="1" size="30" name="imageurl" value="<?php echo $image_link; ?>">
-                             <div style="clear:both"></div>
-                             <div></div>
-                             <div style="clear:both"></div>
-                            <p><?php _e('On image click users will redirect to this url.'); ?></p>
-                         </div>
-                      </div>
-                      <div class="stuffbox" id="namediv" style="min-width:550px;">
-                         <h3><label for="link_name">Upload Image</label></h3>
-                        <div class="inside" id="fileuploaddiv">
-                              <?php if($image_name!=""){ ?>
-                                    <div><b>Current Image : </b><a id="currImg" href="<?php echo $url;?>imagestoscroll/<?php echo $image_name; ?>" target="_new"><?php echo $image_name; ?></a></div>
-                              <?php } ?>      
-                             <input type="file" name="image_name" onchange="reloadfileupload();"  id="image_name" size="30" />
-                             <div style="clear:both"></div>
-                             <div></div>
-                         </div>
-                       </div>
-                        <?php if(isset($_GET['id']) and $_GET['id']>0){ ?> 
-                           <input type="hidden" name="imageid" id="imageid" value="<?php echo $_GET['id'];?>">
-                        <?php
-                        } 
-                        ?>
-                       <input type="submit" onclick="return validateFile();" name="btnsave" id="btnsave" value="Save Changes" class="button-primary">&nbsp;&nbsp;<input type="button" name="cancle" id="cancle" value="Cancel" class="button-primary" onclick="location.href='admin.php?page=responsive_thumbnail_slider_image_management'">
-                                  
-                 </form> 
-                  <script type="text/javascript">
-                  
-                     var $n = jQuery.noConflict();  
-                     $n(document).ready(function() {
-                     
-                        $n("#addimage").validate({
-                            rules: {
-                                    imagetitle: {
-                                      required:true, 
-                                      maxlength: 200
-                                    },imageurl: {
-                                      url:true,  
-                                      maxlength: 500
-                                    },
-                                    image_name:{
-                                      isimage:true  
-                                    }
-                               },
-                                 errorClass: "image_error",
-                                 errorPlacement: function(error, element) {
-                                 error.appendTo( element.next().next().next());
-                             } 
-                             
+     <div id="poststuff">  
+        <div id="post-body" class="metabox-holder columns-2" >
+          <div id="post-body-content">
+           <?php if(isset($_GET['id']) and $_GET['id']>0)
+               { 
 
-                        })
-                    });
-                  
-                  function validateFile(){
-                     
-                     var $n = jQuery.noConflict();   
-                     if($n('#currImg').length>0){
-                         return true;
-                     }
-                        var fragment = $n("#image_name").val();
-                        var filename = $n("#image_name").val().replace(/.+[\\\/]/, "");  
-                        var imageid=$n("#image_name").val();
-                        
-                        if(imageid==""){
-                        
-                            if(filename!="")
-                             return true;
-                            else
-                            {
-                                $n("#err_daynamic").remove();
-                                $n("#image_name").after('<label class="image_error" id="err_daynamic">Please select file.</label>');
-                                return false;  
-                            } 
-                        }
-                       else{
-                           return true;
-                       }      
-                  }
-                  function reloadfileupload(){
-    
-                                var $n = jQuery.noConflict();  
-                                var fragment = $n("#image_name").val();
-                                var filename = $n("#image_name").val().replace(/.+[\\\/]/, "");
-                                var validExtensions=new Array();
-                                validExtensions[0]='jpg';
-                                validExtensions[1]='jpeg';
-                                validExtensions[2]='png';
-                                validExtensions[3]='gif';
-                                validExtensions[4]='bmp';
-                                validExtensions[5]='tif';
-                                
-                                var extension = filename.substr( (filename.lastIndexOf('.') +1) ).toLowerCase();
-                                
-                                var inarr=parseInt($n.inArray( extension, validExtensions));
-                                
-                                if(inarr<0){
-                                 
-                                  $n("#err_daynamic").remove();
-                                  $n('#fileuploaddiv').html($n('#fileuploaddiv').html());   
-                                  $n("#image_name").after('<label class="image_error" id="err_daynamic">Invalid file extension</label>');
-                                 
-                                }
+
+                   $id= $_GET['id'];
+                   $query="SELECT * FROM ".$wpdb->prefix."responsive_thumbnail_slider WHERE id=$id";
+                   $myrow  = $wpdb->get_row($query);
+
+                   if(is_object($myrow)){
+
+                       $title=stripslashes($myrow->title);
+                       $image_link=$myrow->custom_link;
+                       $image_name=stripslashes($myrow->image_name);
+
+                   }   
+
+               ?>
+
+               <h2>Update Image </h2>
+
+               <?php }else{ 
+
+                   $title='';
+                   $image_link='';
+                   $image_name='';
+
+               ?>
+               <span><h3 style="color: blue;"><a target="_blank" href="http://www.my-php-scripts.net/index.php/Wordpress/wordpress-responsive-thumbnail-slider-pro.html">UPGRADE TO PRO VERSION</a></h3></span>
+               <h2>Add Image </h2>
+               <?php } ?>
+
+           <br/>
+           <div id="poststuff">
+               <div id="post-body" class="metabox-holder columns-2">
+                   <div id="post-body-content">
+                       <form method="post" action="" id="addimage" name="addimage" enctype="multipart/form-data" >
+
+                           <div class="stuffbox" id="namediv" style="width:100%;">
+                               <h3><label for="link_name">Image Title</label></h3>
+                               <div class="inside">
+                                   <input type="text" id="imagetitle"  size="30" name="imagetitle" value="<?php echo $title;?>">
+                                   <div style="clear:both"></div>
+                                   <div></div>
+                                   <div style="clear:both"></div>
+                                   <p><?php _e('Used in image alt for seo'); ?></p>
+                               </div>
+                           </div>
+                           <div class="stuffbox" id="namediv" style="width:100%;">
+                               <h3><label for="link_name">Image Url(<?php _e('On click redirect to this url.'); ?>)</label></h3>
+                               <div class="inside">
+                                   <input type="text" id="imageurl" class="url"   size="30" name="imageurl" value="<?php echo $image_link; ?>">
+                                   <div style="clear:both"></div>
+                                   <div></div>
+                                   <div style="clear:both"></div>
+                                   <p><?php _e('On image click users will redirect to this url.'); ?></p>
+                               </div>
+                           </div>
+                           <div class="stuffbox" id="namediv" style="width:100%;">
+                               <h3><label for="link_name">Upload Image</label></h3>
+                               <div class="inside" id="fileuploaddiv">
+                                   <?php if($image_name!=""){ ?>
+                                       <div><b>Current Image : </b><a id="currImg" href="<?php echo $url;?>imagestoscroll/<?php echo $image_name; ?>" target="_new"><?php echo $image_name; ?></a></div>
+                                       <?php } ?>      
+                                   <input type="file" name="image_name" onchange="reloadfileupload();"  id="image_name" size="30" />
+                                   <div style="clear:both"></div>
+                                   <div></div>
+                               </div>
+                           </div>
+                           <?php if(isset($_GET['id']) and $_GET['id']>0){ ?> 
+                               <input type="hidden" name="imageid" id="imageid" value="<?php echo $_GET['id'];?>">
+                               <?php
+                               } 
+                           ?>
+                           <input type="submit" onclick="return validateFile();" name="btnsave" id="btnsave" value="Save Changes" class="button-primary">&nbsp;&nbsp;<input type="button" name="cancle" id="cancle" value="Cancel" class="button-primary" onclick="location.href='admin.php?page=responsive_thumbnail_slider_image_management'">
+
+                       </form> 
+                       <script type="text/javascript">
+
+                           var $n = jQuery.noConflict();  
+                           $n(document).ready(function() {
+
+                                   $n("#addimage").validate({
+                                           rules: {
+                                               imagetitle: {
+                                                   required:true, 
+                                                   maxlength: 200
+                                               },imageurl: {
+                                                   url:true,  
+                                                   maxlength: 500
+                                               },
+                                               image_name:{
+                                                   isimage:true  
+                                               }
+                                           },
+                                           errorClass: "image_error",
+                                           errorPlacement: function(error, element) {
+                                               error.appendTo( element.next().next().next());
+                                           } 
+
+
+                                   })
+                           });
+
+                           function validateFile(){
+
+                               var $n = jQuery.noConflict();   
+                               if($n('#currImg').length>0){
+                                   return true;
+                               }
+                               var fragment = $n("#image_name").val();
+                               var filename = $n("#image_name").val().replace(/.+[\\\/]/, "");  
+                               var imageid=$n("#image_name").val();
+
+                               if(imageid==""){
+
+                                   if(filename!="")
+                                       return true;
+                                   else
+                                       {
+                                       $n("#err_daynamic").remove();
+                                       $n("#image_name").after('<label class="image_error" id="err_daynamic">Please select file.</label>');
+                                       return false;  
+                                   } 
+                               }
+                               else{
+                                   return true;
+                               }      
+                           }
+                           function reloadfileupload(){
+
+                               var $n = jQuery.noConflict();  
+                               var fragment = $n("#image_name").val();
+                               var filename = $n("#image_name").val().replace(/.+[\\\/]/, "");
+                               var validExtensions=new Array();
+                               validExtensions[0]='jpg';
+                               validExtensions[1]='jpeg';
+                               validExtensions[2]='png';
+                               validExtensions[3]='gif';
+                               validExtensions[4]='bmp';
+                               validExtensions[5]='tif';
+
+                               var extension = filename.substr( (filename.lastIndexOf('.') +1) ).toLowerCase();
+
+                               var inarr=parseInt($n.inArray( extension, validExtensions));
+
+                               if(inarr<0){
+
+                                   $n("#err_daynamic").remove();
+                                   $n('#fileuploaddiv').html($n('#fileuploaddiv').html());   
+                                   $n("#image_name").after('<label class="image_error" id="err_daynamic">Invalid file extension</label>');
+
+                               }
                                else{
                                    $n("#err_daynamic").remove();
-                                 
+
                                } 
 
-                       
-                    }  
-                </script> 
 
-                </div>
-          </div>
-        </div>  
-     </div>      
-         </div>
-        <div id="poststuff" class="metabox-holder has-right-sidebar" style="float:right;width:30%;"> 
-           <div class="postbox"> 
-              <h3 class="hndle"><span></span>Best Hosting for WordPress</h3> 
+                           }  
+                       </script> 
+
+                   </div>
+               </div>
+           </div>  
+       </div>      
+        
+        <div id="postbox-container-1" class="postbox-container"> 
+            <div class="postbox"> 
+              <h3 class="hndle"><span></span>Access All Themes In One Price</h3> 
               <div class="inside">
-                   <center><a href="http://www.siteground.com" onClick="this.href='http://www.siteground.com/wordpress-hosting.htm?afbannercode=2efd07dfb14877d963d9e75d5057b4a8'" ><img src="https://ua.siteground.com/img/banners/application/wordpress/250x250.gif" alt="Web Hosting" width="250" height="250" border="0"></a></center>
+                  <center><a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=11715_0_1_10" target="_blank"><img border="0" src="http://www.elegantthemes.com/affiliates/banners/300x250.gif" width="250" height="250"></a></center>
 
                   <div style="margin:10px 5px">
-          
+
                   </div>
-          </div></div>
+              </div></div>
              <div class="postbox"> 
               <h3 class="hndle"><span></span>Worried About SEO ?</h3> 
               <div class="inside">
@@ -1086,7 +1127,7 @@
            
            
            </div>
-     
+        </div>
     <?php 
     } 
   }  
