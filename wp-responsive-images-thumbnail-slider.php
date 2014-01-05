@@ -671,6 +671,7 @@
                                   <th><span>Published On</span></th>
                                   <th><span>Edit</span></th>
                                   <th><span>Delete</span></th>
+                                  </tr>
                               </thead>
                               
                               <tbody id="the-list">
