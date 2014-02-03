@@ -42,7 +42,7 @@
                dbDelta($sql);
                
                
-               $responsive_thumbnail_slider_settings=array('linkimage' => '1','pauseonmouseover' => '1','auto' =>'','speed' => '1000','pause'=>1000,'circular' => '1','imageheight' => '120','imagewidth' => '120','visible'=> '5','scroll' => '1','resizeImages'=>'1','scollerBackground'=>'#FFFFFF','imageMargin'=>'15');
+               $responsive_thumbnail_slider_settings=array('linkimage' => '1','pauseonmouseover' => '1','auto' =>'','speed' => '1000','pause'=>1000,'circular' => '1','imageheight' => '120','imagewidth' => '120','visible'=> '5','min_visible'=> '1','scroll' => '1','resizeImages'=>'1','scollerBackground'=>'#FFFFFF','imageMargin'=>'15');
                
                if( !get_option( 'responsive_thumbnail_slider_settings' ) ) {
                    
@@ -95,6 +95,8 @@
          //$scrollerwidth=$_POST['scrollerwidth'];
          
          $visible=trim($_POST['visible']);
+         
+         $min_visible=trim($_POST['min_visible']);
 
         
          if(isset($_POST['pauseonmouseover']))
@@ -130,6 +132,7 @@
          $options['imageheight']=$imageheight;  
          $options['imagewidth']=$imagewidth;  
          $options['visible']=$visible;  
+         $options['min_visible']=$min_visible;  
          $options['scroll']=$scroll;  
          $options['resizeImages']=1;  
          $options['scollerBackground']=$scollerBackground;  
@@ -281,7 +284,7 @@
                                   </div>
                               </div>
                               <div class="stuffbox" id="namediv" style="width:100%;">
-                                  <h3><label>Visible</label></h3>
+                                  <h3><label>Max Visible</label></h3>
                                   <div class="inside">
                                       <table>
                                           <tr>
@@ -296,6 +299,23 @@
                                       <div style="clear:both"></div>
 
                                   </div>
+                              </div>
+                              <div class="stuffbox" id="namediv" style="width:100%;">
+                                 <h3><label>Min Visible</label></h3>
+                                <div class="inside">
+                                     <table>
+                                       <tr>
+                                         <td>
+                                           <input type="text" id="min_visible" size="30" name="min_visible" value="<?php echo $settings['min_visible']; ?>" style="width:100px;">
+                                           <div style="clear:both">This will decide your slider width in responsive layout</div>
+                                           <div></div>
+                                         </td>
+                                       </tr>
+                                     </table>
+                                     The responsive layout decide by slider itself using min visible.
+                                     <div style="clear:both"></div>
+                                   
+                                 </div>
                               </div>
                               <div class="stuffbox" id="namediv" style="width:100%;">
                                   <h3><label>Scroll</label></h3>
@@ -415,6 +435,12 @@
                                                       maxlength:15
                                                   },
                                                   visible:{
+                                                      required:true,  
+                                                      number:true,
+                                                      maxlength:15
+
+                                                  },
+                                                  min_visible:{
                                                       required:true,  
                                                       number:true,
                                                       maxlength:15
@@ -1361,7 +1387,7 @@
                       var sliderMainHtmladmin=$n('#divSliderMain_admin').html();      
                       var slider= $n('.responsiveSlider').bxSlider({
                                slideWidth: <?php echo $settings['imagewidth'];?>,
-                                minSlides: <?php echo $settings['visible'];?>,
+                                minSlides: <?php echo $settings['min_visible'];?>,
                                 maxSlides: <?php echo $settings['visible'];?>,
                                 moveSlides: <?php echo $settings['scroll'];?>,
                                 slideMargin: <?php echo $settings['imageMargin'];?>,  
@@ -1388,6 +1414,7 @@
                                 
                             
                           });
+           <?php if($settings['auto']){?>
                           
               var is_firefox=navigator.userAgent.toLowerCase().indexOf('firefox') > -1;  
               var is_android=navigator.userAgent.toLowerCase().indexOf('android') > -1;
@@ -1403,7 +1430,7 @@
                     });
                    
               }   
-              <?php if($settings['auto']){?>
+              
                  
                    function onResize(){
                             
@@ -1411,7 +1438,7 @@
                                   $n('#divSliderMain_admin').html(sliderMainHtmladmin);
                                    var slider= $n('.responsiveSlider').bxSlider({
                                    slideWidth: <?php echo $settings['imagewidth'];?>,
-                                    minSlides: <?php echo $settings['visible'];?>,
+                                    minSlides: <?php echo $settings['min_visible'];?>,
                                     maxSlides: <?php echo $settings['visible'];?>,
                                     moveSlides: <?php echo $settings['scroll'];?>,
                                     slideMargin: <?php echo $settings['imageMargin'];?>,  
@@ -1583,7 +1610,7 @@
              var sliderMainHtml=$n('#divSliderMain').html();   
              var slider= $n('.responsiveSlider').bxSlider({
                    slideWidth: <?php echo $settings['imagewidth'];?>,
-                    minSlides: <?php echo $settings['visible'];?>,
+                    minSlides: <?php echo $settings['min_visible'];?>,
                     maxSlides: <?php echo $settings['visible'];?>,
                     moveSlides: <?php echo $settings['scroll'];?>,
                     slideMargin: <?php echo $settings['imageMargin'];?>,  
@@ -1636,7 +1663,7 @@
                                   $n('#divSliderMain').html(sliderMainHtml);
                                    var slider= $n('.responsiveSlider').bxSlider({
                                    slideWidth: <?php echo $settings['imagewidth'];?>,
-                                    minSlides: <?php echo $settings['visible'];?>,
+                                    minSlides: <?php echo $settings['min_visible'];?>,
                                     maxSlides: <?php echo $settings['visible'];?>,
                                     moveSlides: <?php echo $settings['scroll'];?>,
                                     slideMargin: <?php echo $settings['imageMargin'];?>,  
