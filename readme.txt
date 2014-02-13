@@ -1,6 +1,6 @@
 === wordpress responsive thumbnail slider ===
 Contributors:nik00726
-Donate link: http://my-php-scripts.net/donate-wordpress_image_thumbnail.php
+Donate link: http://www.i13websolution.com/donate-wordpress_image_thumbnail.php
 Tags:wordpress responsive slideshow,responsive thumbnail gallery,wordpress responsive slider with thumbnails,wordpress gallery responsive,wordpress fluid slider,wordpress fluid thumbnails slider,wordpress responsive image slider
 Requires at least:3.0
 Tested up to:3.8.1
@@ -18,9 +18,9 @@ This is beautiful responsive image slider for wordPress blogs and sites.Admin ca
 Admin can add,edit and delete slider images.Before add slider to wordPress blog admin can preview a slider.Admin can set height,width of slider images.Admin can also set speed,Number Of visible images into slider,Circular slider.Admin can also set if want to slide images with up and down arrow or by automatic slider.
 
 
-**Find WordPress Responsive Image Slider Pro Plugin(Unlimited Slider+Much more) at [Advanced PHP Scripts](http://www.my-php-scripts.net/index.php/Wordpress/wordpress-responsive-thumbnail-slider-pro.html)**
+**Find WordPress Responsive Image Slider Pro Plugin(Unlimited Slider+Much more) at [WordPress Responsive Thumbnail Slider](http://www.i13websolution.com/wordpress-responsive-thumbnail-slider-pro.html)**
 
-**[Live Demo Pro Responsive Slider](http://my-php-scripts.net/wpdemo/wordpress-responsive-thumbnail-slider-demo/)**
+**[Live Demo Pro Responsive Slider](http://www.i13websolution.com/wpdemo/wordpress-responsive-thumbnail-slider-demo/)**
 
 
 **Please rate this plugin if you find it useful**
@@ -74,7 +74,7 @@ to theme or pages/posts.
 12. Responsive admin layout.
 
 
-[Get Support](http://www.my-php-scripts.net/index.php/Default-form.html)
+[Get Support](http://www.i13websolution.com/contacts)
 
 
 == Installation ==
