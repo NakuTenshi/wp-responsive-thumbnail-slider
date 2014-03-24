@@ -1419,14 +1419,19 @@
               var is_firefox=navigator.userAgent.toLowerCase().indexOf('firefox') > -1;  
               var is_android=navigator.userAgent.toLowerCase().indexOf('android') > -1;
               var is_iphone=navigator.userAgent.toLowerCase().indexOf('iphone') > -1;
-         
+              var width = $n(window).width();
              if(is_firefox && (is_android || is_iphone)){
                  
              }else{
                   var timer;
                     $n(window).bind('resize', function(){
-                       timer && clearTimeout(timer);
-                       timer = setTimeout(onResize, 600);
+                       if($n(window).width() != width){ 
+                        
+                        width = $n(window).width();   
+                        timer && clearTimeout(timer);
+                        timer = setTimeout(onResize, 600);
+                        
+                       }
                     });
                    
               }   
@@ -1645,14 +1650,19 @@
                    var is_firefox=navigator.userAgent.toLowerCase().indexOf('firefox') > -1;  
                   var is_android=navigator.userAgent.toLowerCase().indexOf('android') > -1;
                   var is_iphone=navigator.userAgent.toLowerCase().indexOf('iphone') > -1;
-             
+                  var width = $n(window).width();
                  if(is_firefox && (is_android || is_iphone)){
                      
                  }else{
-                      var timer;
+                        var timer;
                         $n(window).bind('resize', function(){
-                           timer && clearTimeout(timer);
-                           timer = setTimeout(onResize, 600);
+                           if($n(window).width() != width){
+                               
+                            width = $n(window).width(); 
+                            timer && clearTimeout(timer);
+                            timer = setTimeout(onResize, 600);
+                            
+                           }
                         });
                        
                   }    
