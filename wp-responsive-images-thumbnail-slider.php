@@ -1404,7 +1404,7 @@
                                   controls:true,
                                 <?php endif;?>
                                 pager:false,
-                                useCSS:true,
+                                useCSS:false,
                                 <?php if($settings['auto']):?>
                                  autoStart:true,
                                  autoDelay:200,
@@ -1460,7 +1460,7 @@
                                       controls:true,
                                     <?php endif;?>
                                     pager:false,
-                                    useCSS:true,
+                                    useCSS:false,
                                     <?php if($settings['auto']):?>
                                      auto:true,       
                                     <?php endif;?>
@@ -1632,7 +1632,7 @@
                       controls:true,
                     <?php endif;?>
                     pager:false,
-                    useCSS:true,
+                    useCSS:false,
                     <?php if($settings['auto']):?>
                      auto:true,       
                     <?php endif;?>
@@ -1690,7 +1690,7 @@
                                       controls:true,
                                     <?php endif;?>
                                     pager:false,
-                                    useCSS:true,
+                                    useCSS:false,
                                     <?php if($settings['auto']):?>
                                      auto:true,       
                                     <?php endif;?>
