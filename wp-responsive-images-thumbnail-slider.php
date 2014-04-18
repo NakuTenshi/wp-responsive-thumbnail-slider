@@ -783,11 +783,13 @@
                       </script>
 
                       <br class="clear">
-                      <h3>To print this slider into WordPress Post/Page use bellow code</h3>
-                      <pre class="printCode">[print_responsive_thumbnail_slider]</pre>
+                      
+                      <h3>To print this slider into WordPress Post/Page use below Short code</h3>
+                      <input type="text" value="[print_responsive_thumbnail_slider]" style="width: 400px;height: 30px" onclick="this.focus();this.select()" />
                       <div class="clear"></div>
-                      <h3>To print this slider into WordPress theme/template PHP files use bellow code</h3>
-                      <pre class="printCode">echo do_shortcode('[print_responsive_thumbnail_slider]'); </pre>
+                      <h3>To print this slider into WordPress theme/template PHP files use below php code</h3>
+                      <input type="text" value="echo do_shortcode('[print_responsive_thumbnail_slider]');" style="width: 400px;height: 30px" onclick="this.focus();this.select()" />
+                    
                       <div class="clear"></div>
                   </div>
                   <div id="postbox-container-1" class="postbox-container"> 
@@ -1487,15 +1489,11 @@
 </div>
 <div class="clear"></div>
 </div>
-<h3>To print this slider into WordPress Post/Page use bellow code</h3>
-<pre class="printCode">
-  [print_responsive_thumbnail_slider]
-</pre>
+<h3>To print this slider into WordPress Post/Page use below Short code</h3>
+<input type="text" value="[print_responsive_thumbnail_slider]" style="width: 400px;height: 30px" onclick="this.focus();this.select()" />
 <div class="clear"></div>
-<h3>To print this slider into WordPress theme/template PHP files use bellow code</h3>
-<pre class="printCode">
-  echo do_shortcode('[print_responsive_thumbnail_slider]'); 
-</pre>
+<h3>To print this slider into WordPress theme/template PHP files use below php code</h3>
+<input type="text" value="echo do_shortcode('[print_responsive_thumbnail_slider]');" style="width: 400px;height: 30px" onclick="this.focus();this.select()" />
 <div class="clear"></div>
 <?php       
    }
