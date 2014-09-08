@@ -3,7 +3,7 @@ Contributors:nik00726
 Donate link: http://www.i13websolution.com/donate-wordpress_image_thumbnail.php
 Tags:wordpress responsive slideshow,responsive thumbnail gallery,wordpress responsive slider with thumbnails,wordpress gallery responsive,wordpress fluid slider,wordpress fluid thumbnails slider,wordpress responsive image slider
 Requires at least:3.0
-Tested up to:3.9
+Tested up to:4.0
 Version:1.0
 Stable tag:trunk
 License: GPLv2 or later
@@ -13,6 +13,7 @@ This is beautiful responsive image slider for wordPress blogs and sites.Admin ca
 
 == Description ==
 
+**Support Upto WordPress 4.0**
 
 This is beautiful responsive image slider for wordPress blogs and sites.Admin can manages any number of images into the responsive slider.
 Admin can add,edit and delete slider images.Before add slider to wordPress blog admin can preview a slider.Admin can set height,width of slider images.Admin can also set speed,Number Of visible images into slider,Circular slider.Admin can also set if want to slide images with up and down arrow or by automatic slider.
