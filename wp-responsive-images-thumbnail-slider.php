@@ -1,15 +1,15 @@
 <?php
    /* 
     Plugin Name: WordPress Responsive Thumbnail Slider
-    Plugin URI:http://www.i13websolution.com 
-    Author URI:http://www.i13websolution.com
+    Plugin URI:http://www.i13websolution.com/wordpress-responsive-thumbnail-slider-pro.html 
+    Author URI:http://www.i13websolution.com/wordpress-responsive-thumbnail-slider-pro.html
     Description: This is beautiful responsive thumbnail image slider plugin for WordPress.Add any number of images from admin panel.
     Author:I Thirteen Web Solution
     Version:1.0
     */
 
     add_action('admin_menu', 'add_responsive_thumbnail_slider_admin_menu');
-    add_action( 'admin_init', 'my_responsive_thumbnailSlider_admin_init' );
+    //add_action( 'admin_init', 'my_responsive_thumbnailSlider_admin_init' );
     register_activation_hook(__FILE__,'install_responsive_thumbnailSlider');
     add_action('wp_enqueue_scripts', 'responsive_thumbnail_slider_load_styles_and_js');
     add_shortcode('print_responsive_thumbnail_slider', 'print_responsive_thumbnail_slider_func' );
@@ -56,11 +56,14 @@
    
     function add_responsive_thumbnail_slider_admin_menu(){
         
-        add_menu_page( __( 'Responsive Thumbnail Slider'), __( 'Responsive Thumbnail Slider' ), 'administrator', 'responsive_thumbnail_slider', 'responsive_thumbnail_slider_admin_options' );
-        add_submenu_page( 'responsive_thumbnail_slider', __( 'Slider Setting'), __( 'Slider Setting' ),'administrator', 'responsive_thumbnail_slider', 'responsive_thumbnail_slider_admin_options' );
-        add_submenu_page( 'responsive_thumbnail_slider', __( 'Manage Images'), __( 'Manage Images'),'administrator', 'responsive_thumbnail_slider_image_management', 'responsive_thumbnail_image_management' );
-        add_submenu_page( 'responsive_thumbnail_slider', __( 'Preview Slider'), __( 'Preview Slider'),'administrator', 'responsive_thumbnail_slider_preview', 'responsivepreviewSliderAdmin' );
+        $hook_suffix_r_t_s=add_menu_page( __( 'Responsive Thumbnail Slider'), __( 'Responsive Thumbnail Slider' ), 'administrator', 'responsive_thumbnail_slider', 'responsive_thumbnail_slider_admin_options' );
+        $hook_suffix_r_t_s=add_submenu_page( 'responsive_thumbnail_slider', __( 'Slider Setting'), __( 'Slider Setting' ),'administrator', 'responsive_thumbnail_slider', 'responsive_thumbnail_slider_admin_options' );
+        $hook_suffix_r_t_s_1=add_submenu_page( 'responsive_thumbnail_slider', __( 'Manage Images'), __( 'Manage Images'),'administrator', 'responsive_thumbnail_slider_image_management', 'responsive_thumbnail_image_management' );
+        $hook_suffix_r_t_s_2=add_submenu_page( 'responsive_thumbnail_slider', __( 'Preview Slider'), __( 'Preview Slider'),'administrator', 'responsive_thumbnail_slider_preview', 'responsivepreviewSliderAdmin' );
         
+        add_action( 'load-' . $hook_suffix_r_t_s , 'my_responsive_thumbnailSlider_admin_init' );
+        add_action( 'load-' . $hook_suffix_r_t_s_1 , 'my_responsive_thumbnailSlider_admin_init' );
+        add_action( 'load-' . $hook_suffix_r_t_s_2 , 'my_responsive_thumbnailSlider_admin_init' );
         
     }
     
@@ -1177,7 +1180,7 @@
                             $image_name=stripslashes($myrow->image_name);
                             $wpcurrentdir=dirname(__FILE__);
                             $wpcurrentdir=str_replace("\\","/",$wpcurrentdir);
-                            $imagename=$_FILES["image_name"]["name"];
+                            
                             $imagetoDel=$wpcurrentdir.'/imagestoscroll/'.$image_name;
                             @unlink($imagetoDel);
                                         
@@ -1225,7 +1228,7 @@
                                         $image_name=stripslashes($myrow->image_name);
                                         $wpcurrentdir=dirname(__FILE__);
                                         $wpcurrentdir=str_replace("\\","/",$wpcurrentdir);
-                                        $imagename=$_FILES["image_name"]["name"];
+                                       
                                         $imagetoDel=$wpcurrentdir.'/imagestoscroll/'.$image_name;
                                         @unlink($imagetoDel);
                                         $query = "delete from  ".$wpdb->prefix."responsive_thumbnail_slider where id=$img";
@@ -1281,7 +1284,6 @@
             <div class="wrap">
                     <h2>Slider Preview</h2>
             <br>
-            <div style="font-size: 12;">Admin slider preview is not responsive(Responsive slider need responsive theme)</div>
             <?php
                 $wpcurrentdir=dirname(__FILE__);
                 $wpcurrentdir=str_replace("\\","/",$wpcurrentdir);
