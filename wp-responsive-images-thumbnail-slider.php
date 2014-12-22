@@ -417,7 +417,7 @@
                               </div>
 
                               <input type="submit"  name="btnsave" id="btnsave" value="Save Changes" class="button-primary">&nbsp;&nbsp;<input type="button" name="cancle" id="cancle" value="Cancel" class="button-primary" onclick="location.href='admin.php?page=responsive_thumbnail_slider_image_management'">
-
+                              
                           </form> 
                           <script type="text/javascript">
 
@@ -507,8 +507,9 @@
               </div></div>
           <div class="postbox"> 
               <h3 class="hndle"><span></span>Recommended WordPress Hostings</h3> 
+              
               <div class="inside">
-                  <center><a target="_blank" href="http://www.shareasale.com/r.cfm?b=531904&u=675922&m=41388&urllink=&afftrack="><img src="http://www.shareasale.com/image/41388/sas_banner_250x250.jpg" alt="WP Engine" border="0"></a></center>
+                   <center><a href="http://secure.hostgator.com/~affiliat/cgi-bin/affiliates/clickthru.cgi?id=nik00726-hs-wp"><img src="http://tracking.hostgator.com/img/WordPress_Hosting/300x250-animated.gif" width="250" height="250" border="0"></a></center>
                   <div style="margin:10px 5px">
                   </div>
               </div></div>
@@ -805,9 +806,9 @@
                               </div>
                           </div></div>
                       <div class="postbox"> 
-                          <h3 class="hndle"><span></span>Recommended WordPress SEO Tools</h3> 
+                          <h3 class="hndle"><span></span>Recommended WordPress Hosting</h3> 
                           <div class="inside">
-                              <center><a href="http://www.semrush.com/sem.html?ref=961672083"> <img width="250" height="250" src="http://www.berush.com/images/240x240_semrush_en.png" /></a></center>
+                               <center><a href="http://secure.hostgator.com/~affiliat/cgi-bin/affiliates/clickthru.cgi?id=nik00726-hs-wp"><img src="http://tracking.hostgator.com/img/WordPress_Hosting/300x250-animated.gif" width="250" height="250" border="0"></a></center>
 
                               <div style="margin:10px 5px">
 
@@ -855,6 +856,7 @@
                         update_option('responsive_thumbnail_slider_messages', $responsive_thumbnail_slider_messages);
 
                         echo "<script type='text/javascript'> location.href='$location';</script>";
+                        exit;
                          
                     }
                     else{
@@ -896,6 +898,7 @@
                 
                           
               echo "<script type='text/javascript'> location.href='$location';</script>";
+              exit;
        }
       else{
       
@@ -923,6 +926,7 @@
                     update_option('responsive_thumbnail_slider_messages', $responsive_thumbnail_slider_messages);
 
                     echo "<script type='text/javascript'> location.href='$location';</script>";
+                    exit;
                      
                 }
                 else{
@@ -958,7 +962,8 @@
                         }  
                      
                      }     
-                echo "<script type='text/javascript'> location.href='$location';</script>";          
+                echo "<script type='text/javascript'> location.href='$location';</script>";     
+                exit;     
             
        } 
         
@@ -1204,6 +1209,7 @@
                 }  
                           
           echo "<script type='text/javascript'> location.href='$location';</script>";
+          exit;
               
   }  
   else if(strtolower($action)==strtolower('deleteselected')){
@@ -1252,18 +1258,20 @@
                         }  
                               
                        echo "<script type='text/javascript'> location.href='$location';</script>";
-                
+                       exit;
                 
                 }
                 else{
                 
-                    echo "<script type='text/javascript'> location.href='$location';</script>";   
+                    echo "<script type='text/javascript'> location.href='$location';</script>";
+                    exit;   
                 }
             
            }
            else{
            
-                echo "<script type='text/javascript'> location.href='$location';</script>";      
+                echo "<script type='text/javascript'> location.href='$location';</script>"; 
+                exit;     
            }
      
       }      
