@@ -22,6 +22,7 @@
     padding: 0 !important;
     *zoom: 1 !important;
 }
+.bx-wrapper * {box-sizing:content-box}
 .limargin{margin-right: 15px !important;}
 
 .bx-wrapper .bx-viewport {padding: 5px !important;left: -5px !important;}
