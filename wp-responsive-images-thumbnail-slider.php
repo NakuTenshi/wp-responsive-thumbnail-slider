@@ -807,7 +807,7 @@ function responsive_thumbnail_slider_admin_scripts_init() {
                                               $editlink="admin.php?page=responsive_thumbnail_slider_image_management&action=addedit&id=$id";
                                               $deletelink="admin.php?page=responsive_thumbnail_slider_image_management&action=delete&id=$id";
                                               
-                                              $outputimgmain = $baseurl."/".$row['image_name']; 
+                                              $outputimgmain = $baseurl.$row['image_name']; 
                                              
 
                                           ?>
@@ -1166,28 +1166,7 @@ function responsive_thumbnail_slider_admin_scripts_init() {
                <div id="post-body" class="metabox-holder columns-2">
                    <div id="post-body-content">
                        <form method="post" action="" id="addimage" name="addimage" enctype="multipart/form-data" >
-
-                           <div class="stuffbox" id="namediv" style="width:100%;">
-                               <h3><label for="link_name">Image Title</label></h3>
-                               <div class="inside">
-                                   <input type="text" id="imagetitle"  size="30" name="imagetitle" value="<?php echo $title;?>">
-                                   <div style="clear:both"></div>
-                                   <div></div>
-                                   <div style="clear:both"></div>
-                                   <p><?php _e('Used in image alt for seo'); ?></p>
-                               </div>
-                           </div>
-                           <div class="stuffbox" id="namediv" style="width:100%;">
-                               <h3><label for="link_name">Image Url(<?php _e('On click redirect to this url.'); ?>)</label></h3>
-                               <div class="inside">
-                                   <input type="text" id="imageurl" class="url"   size="30" name="imageurl" value="<?php echo $image_link; ?>">
-                                   <div style="clear:both"></div>
-                                   <div></div>
-                                   <div style="clear:both"></div>
-                                   <p><?php _e('On image click users will redirect to this url.'); ?></p>
-                               </div>
-                           </div>
-                           <div class="stuffbox" id="namediv" style="width:100%;">
+                              <div class="stuffbox" id="namediv" style="width:100%;">
                          <h3><label for="link_name">Upload Image</label></h3>
                          <div class="inside" id="fileuploaddiv">
                               <?php if($image_name!=""){ ?>
@@ -1316,6 +1295,27 @@ function responsive_thumbnail_slider_admin_scripts_init() {
                             <?php } ?> 
                          </div>
                        </div>
+                           <div class="stuffbox" id="namediv" style="width:100%;">
+                               <h3><label for="link_name">Image Title</label></h3>
+                               <div class="inside">
+                                   <input type="text" id="imagetitle"  size="30" name="imagetitle" value="<?php echo $title;?>">
+                                   <div style="clear:both"></div>
+                                   <div></div>
+                                   <div style="clear:both"></div>
+                                   <p><?php _e('Used in image alt for seo'); ?></p>
+                               </div>
+                           </div>
+                           <div class="stuffbox" id="namediv" style="width:100%;">
+                               <h3><label for="link_name">Image Url(<?php _e('On click redirect to this url.'); ?>)</label></h3>
+                               <div class="inside">
+                                   <input type="text" id="imageurl" class="url"   size="30" name="imageurl" value="<?php echo $image_link; ?>">
+                                   <div style="clear:both"></div>
+                                   <div></div>
+                                   <div style="clear:both"></div>
+                                   <p><?php _e('On image click users will redirect to this url.'); ?></p>
+                               </div>
+                           </div>
+                        
                            <?php if(isset($_GET['id']) and $_GET['id']>0){ ?> 
                                <input type="hidden" name="imageid" id="imageid" value="<?php echo $_GET['id'];?>">
                                <?php
