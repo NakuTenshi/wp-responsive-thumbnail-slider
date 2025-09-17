@@ -1,3 +1,9 @@
+# this plugin is vulnerable to RCE file upload , it good to use it as backdoor in wordpress targets
+
+---
+
+```
+
 === wordpress responsive thumbnail slider ===
 Contributors:nik00726
 Donate link: http://www.i13websolution.com/donate-wordpress_image_thumbnail.php
@@ -141,3 +147,5 @@ This plugin is free for everyone! Since it's released under the GPL, you can use
 1.How to use ?
 
 For More info use readme installation and usage notes.
+
+```
